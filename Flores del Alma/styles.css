@@ -1,0 +1,114 @@
+
+/* Variables */
+:root {
+    --color-fondo: #fcf8f6;
+    --color-secundario: #f6bccb;
+    --color-blanco: #c32733;
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el contenido ocupe al menos la altura de la ventana */
+}
+
+header {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--color-secundario);
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #333;
+}
+
+main {
+    flex: 1; /* Permite que el main crezca para ocupar el espacio restante */
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 10px;
+    width: 100%;
+    position: static; /* Deja que Flexbox gestione su posición */
+}
+.productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.galeria img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.galeria img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.galeria img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--color-secundario);
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: var(--color-blanco);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--color-secundario);
+    border-radius: 5px;
+}
+
+form button {
+    background-color: var(--color-blanco);
+    color: var(--color-secundario); /* Corrige el color para que sea visible */
+    font-weight: bold;
+    border: none;
+}
+
+form button:hover {
+    background-color: #333;
+    color: var(--color-blanco); /* Contraste para mejor visibilidad */
+}
+
